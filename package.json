@@ -1,0 +1,20 @@
+{
+  "name": "eSpark-problem",
+  "version": "1.0.0",
+  "description": "### How to get up and running:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinRyanCarlson/eSpark-problem.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustinRyanCarlson/eSpark-problem/issues"
+  },
+  "homepage": "https://github.com/JustinRyanCarlson/eSpark-problem#readme"
+}
