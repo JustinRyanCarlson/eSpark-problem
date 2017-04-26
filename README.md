@@ -1,4 +1,4 @@
-# My solution to the problem given to me from ESpark
+# My solution to student plan ESpark problem
 
 ### How to get up and running:
 1. Clone this repository on your local machine.
