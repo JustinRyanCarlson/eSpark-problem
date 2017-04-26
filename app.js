@@ -1,17 +1,33 @@
-var fs = require('fs');
-var csv = require('fast-csv');
+const fs = require('fs');
+const csv = require('fast-csv');
+const domainOrder = [];
+const studentTests = [];
 
 
-var arr = [];
+readCSVs();
 
-var stream = fs.createReadStream("./csv/domain_order.csv");
 
-csv
-    .fromStream(stream)
-    .on("data", function (data) {
-        arr.push(data);
-    })
-    .on("end", function () {
-        console.log("done");
-        console.log(arr[1]);
-    });
+function readCSVs() {
+    const domainOrderCSV = fs.createReadStream("./csv/domain_order.csv");
+
+    csv
+        .fromStream(domainOrderCSV)
+        .on("data", function (data) {
+            domainOrder.push(data);
+        })
+        .on("end", function () {
+            console.log("domain_order.csv read successful");
+            console.log(domainOrder);
+            const studentTestCSV = fs.createReadStream("./csv/student_tests.csv");
+
+            csv
+                .fromStream(studentTestCSV)
+                .on("data", function (data) {
+                    studentTests.push(data);
+                })
+                .on("end", function () {
+                    console.log("domain_order.csv read successful");
+                    console.log(studentTests);
+                });
+        });
+}
